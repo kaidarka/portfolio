@@ -1,0 +1,95 @@
+.header
+    background: url(../img/hero-bg.png) no-repeat center top
+    &__body
+        position: relative
+        z-index: 3
+        padding: 0px 10px
+        padding-top: 70px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__menu
+    &__burger
+        display: none    
+    &__list
+        display: flex
+        & li
+            list-style: none
+    &__link
+        font-family: 'Muli SemiBold'
+        color: #ffffff
+        text-decoration: none
+        font-size: 14px
+        margin-right: 20px
+        padding: 5px 7px
+        &:hover
+            border-bottom: 1px solid #ffcc00
+        &::last-child
+            margin-right: 0
+@media screen and ( max-width: 767px )
+    body.lock
+        overflow: hidden
+    .header
+        &__logo
+            z-index: 3
+        &__body
+            padding-top: 30px
+        &__burger
+            z-index: 3
+            display: block
+            position: relative
+            width: 30px
+            height: 20px
+            &.active
+                & span
+                    transform: scale(0)
+                &::before
+                    transform: rotate(45deg)
+                    top: 9px
+                &::after
+                    transform: rotate(-45deg)
+                    bottom: 9px
+            & span
+                position: absolute
+                background-color: #fff
+                left: 0
+                width: 100%
+                height: 2px
+                top: 9px
+                transition: all 0.3s ease 0s
+            &::before, &::after
+                content: ''
+                background-color: #fff
+                position: absolute
+                width: 100%
+                height: 2px
+                left: 0
+                transition: all 0.3s ease 0s
+            &::before
+                top: 0
+            &::after
+                bottom: 0
+        &__menu
+            position: fixed
+            left: -100%
+            top: 0
+            opacity: 0
+            height: 100%
+            width: 100%
+            background: #2b2d5c
+            z-index: 2
+            padding: 130px 0px 0px 15px
+            transition: all 0.3s ease 0s
+            overflow: auto 
+            &.active
+                left: 0
+                opacity: 1
+        &__list
+            display: block
+            & li
+                margin-bottom: 25px
+        &__link
+            font-size: 20px
+
+            
+    
