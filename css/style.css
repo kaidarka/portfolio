@@ -37,9 +37,9 @@ p {
 
 .yelow-button {
   border-radius: 60px;
-  border: 3px solid red;
+  border: 3px solid #ff0000;
   color: #2b2d5c;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .yelow-button:hover {
